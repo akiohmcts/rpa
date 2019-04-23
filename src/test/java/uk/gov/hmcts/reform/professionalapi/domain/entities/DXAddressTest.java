@@ -9,7 +9,7 @@ public class DXAddressTest {
 	@Test
 	public void creates_dx_address_correctly() {
 
-		DXAddress dxAddress = new DXAddress(null, "some-number", "some-exchange");
+		DXAddress dxAddress = new DXAddress("some-number", "some-exchange");
 
 		assertThat(dxAddress.getId()).isNull();
 		assertThat(dxAddress.getDxNumber()).isEqualTo("some-number");
