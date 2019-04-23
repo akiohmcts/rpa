@@ -15,9 +15,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DXAddress {
 
-	//waiting for Data Model
-	//will change this depending on the link
-	//between this entity and contact information
 	@Id
 	@GeneratedValue(strategy = AUTO)
 	private UUID id;
