@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.gov.hmcts.reform.professionalapi.infrastructure.security.JwtAccessTokenDecoderTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-04-23T13:00:46" hostname="LTGB07105" time="0.431">
+  <properties/>
+  <testcase name="wraps_deserialization_exceptions" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.security.JwtAccessTokenDecoderTest" time="0.377"/>
+  <testcase name="can_decode_token_with_bearer_marker_and_return_claims" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.security.JwtAccessTokenDecoderTest" time="0.046"/>
+  <testcase name="wraps_decode_exceptions" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.security.JwtAccessTokenDecoderTest" time="0.003"/>
+  <testcase name="can_decode_token_and_return_claims" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.security.JwtAccessTokenDecoderTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

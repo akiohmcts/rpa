@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.10.1">
+<file name="C:\Users\778425\Documents\Projects\rpa\src\integrationTest\java\uk\gov\hmcts\reform\professionalapi\CreateMinimalOrganisationTest.java">
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\integrationTest\java\uk\gov\hmcts\reform\professionalapi\CreateOrganisationWithPaymentAccountTest.java">
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\integrationTest\java\uk\gov\hmcts\reform\professionalapi\docs\SwaggerPublisher.java">
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\integrationTest\java\uk\gov\hmcts\reform\professionalapi\util\ProfessionalReferenceDataClient.java">
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\integrationTest\java\uk\gov\hmcts\reform\professionalapi\util\Service2ServiceEnabledIntegrationTest.java">
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\integrationTest\java\uk\gov\hmcts\reform\professionalapi\util\SpringBootIntegrationTest.java">
+</file>
+</checkstyle>

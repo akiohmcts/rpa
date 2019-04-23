@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.gov.hmcts.reform.professionalapi.domain.entities.OrganisationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-04-23T13:00:40" hostname="LTGB07105" time="1.731">
+  <properties/>
+  <testcase name="adds_payment_account_correctly" classname="uk.gov.hmcts.reform.professionalapi.domain.entities.OrganisationTest" time="1.656"/>
+  <testcase name="creates_organisation_correctly" classname="uk.gov.hmcts.reform.professionalapi.domain.entities.OrganisationTest" time="0.011"/>
+  <testcase name="adds_users_correctly" classname="uk.gov.hmcts.reform.professionalapi.domain.entities.OrganisationTest" time="0.064"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

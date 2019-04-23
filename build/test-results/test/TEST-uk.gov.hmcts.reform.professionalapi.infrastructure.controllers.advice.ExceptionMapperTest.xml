@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.advice.ExceptionMapperTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-04-23T13:00:44" hostname="LTGB07105" time="0.276">
+  <properties/>
+  <testcase name="should_handle_exception" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.advice.ExceptionMapperTest" time="0.19"/>
+  <testcase name="should_handle_empty_result_exception" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.advice.ExceptionMapperTest" time="0.083"/>
+  <system-out><![CDATA[2019-04-23 14:00:44.175  INFO   --- [    Test worker] u.g.h.r.p.i.c.advice.ExceptionMapper     : Exception: {}
+
+org.mockito.codegen.Exception$MockitoMock$527777014: null
+
+2019-04-23 14:00:44.379  INFO   --- [    Test worker] u.g.h.r.p.i.c.advice.ExceptionMapper     : handling exception: null
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

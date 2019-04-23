@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.12.0" timestamp="2019-04-23T14:00:31.250">
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\domain\service\OrganisationService.java">
+<violation beginline="20" endline="20" begincolumn="42" endcolumn="63" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.domain.service" class="OrganisationService" variable="organisationRepository" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="21" endline="21" begincolumn="46" endcolumn="71" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.domain.service" class="OrganisationService" variable="professionalUserRepository" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="22" endline="22" begincolumn="44" endcolumn="67" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.domain.service" class="OrganisationService" variable="paymentAccountRepository" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="54" endline="60" begincolumn="32" endcolumn="93" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.domain.service" class="OrganisationService" method="addPbaAccountToOrganisation" variable="pbaAccount" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'UR'-anomaly for variable 'pbaAccount' (lines '54'-'60').
+</violation>
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\infrastructure\config\SecurityConfiguration.java">
+<violation beginline="24" endline="24" begincolumn="46" endcolumn="69" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.config" class="SecurityConfiguration" variable="serviceRequestAuthorizer" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="25" endline="25" begincolumn="41" endcolumn="61" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.config" class="SecurityConfiguration" variable="authenticationManager" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\infrastructure\controllers\OrganisationController.java">
+<violation beginline="25" endline="25" begincolumn="39" endcolumn="57" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers" class="OrganisationController" variable="organisationService" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\infrastructure\controllers\response\OrganisationResponse.java">
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="27" rule="UnusedPrivateField" ruleset="Best Practices" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'id'.
+</violation>
+<violation beginline="12" endline="12" begincolumn="26" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="26" endcolumn="29" rule="UnusedPrivateField" ruleset="Best Practices" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="name" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'name'.
+</violation>
+<violation beginline="14" endline="14" begincolumn="26" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="name" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="16" endline="16" begincolumn="32" endcolumn="38" rule="UnusedPrivateField" ruleset="Best Practices" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="userIds" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'userIds'.
+</violation>
+<violation beginline="16" endline="16" begincolumn="32" endcolumn="38" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="userIds" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="18" endline="18" begincolumn="32" endcolumn="42" rule="UnusedPrivateField" ruleset="Best Practices" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="pbaAccounts" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_bestpractices.html#unusedprivatefield" priority="3">
+Avoid unused private fields such as 'pbaAccounts'.
+</violation>
+<violation beginline="18" endline="18" begincolumn="32" endcolumn="42" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.response" class="OrganisationResponse" variable="pbaAccounts" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\infrastructure\security\JwtAccessTokenDecoder.java">
+<violation beginline="16" endline="16" begincolumn="32" endcolumn="37" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.security" class="JwtAccessTokenDecoder" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="24" endline="46" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="uk.gov.hmcts.reform.professionalapi.infrastructure.security" class="JwtAccessTokenDecoder" method="decode" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'decode(String)' is missing an @Override annotation.
+</violation>
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\infrastructure\security\idam\IdentityManagerResponseException.java">
+<violation beginline="7" endline="18" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.security.idam" class="IdentityManagerResponseException" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="C:\Users\778425\Documents\Projects\rpa\src\main\java\uk\gov\hmcts\reform\professionalapi\infrastructure\serialization\StdSerializer.java">
+<violation beginline="10" endline="10" begincolumn="32" endcolumn="37" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="uk.gov.hmcts.reform.professionalapi.infrastructure.serialization" class="StdSerializer" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="18" endline="28" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="uk.gov.hmcts.reform.professionalapi.infrastructure.serialization" class="StdSerializer" method="serialize" externalInfoUrl="https://pmd.github.io/pmd-6.12.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'serialize(T)' is missing an @Override annotation.
+</violation>
+</file>
+</pmd>
