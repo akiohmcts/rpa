@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.10.1">
-<file name="C:\Users\182588\LatestCode\RDCC-160-Master\rpa\src\functionalTest\java\uk\gov\hmcts\reform\professionalapi\EndpointSecurityTest.java">
-</file>
-<file name="C:\Users\182588\LatestCode\RDCC-160-Master\rpa\src\functionalTest\java\uk\gov\hmcts\reform\professionalapi\OrganisationCreationsTest.java">
-</file>
-<file name="C:\Users\182588\LatestCode\RDCC-160-Master\rpa\src\functionalTest\java\uk\gov\hmcts\reform\professionalapi\util\AuthorizationHeadersProvider.java">
-</file>
-</checkstyle>

@@ -1,6 +1,0 @@
-p2019-04-24 11:45:02.111  INFO   --- [    Test worker] u.g.h.r.p.i.c.advice.ExceptionMapper     : Exception: {}
-
-<org.mockito.codegen.Exception$MockitoMock$1467013890: null
-
-{2019-04-24 11:45:02.279  INFO   --- [    Test worker] u.g.h.r.p.i.c.advice.ExceptionMapper     : handling exception: null
-Ù2019-04-24 11:45:03.270  INFO   --- [    Test worker] u.g.h.r.p.i.c.WelcomeController          : Welcome message 'Welcome to the System Reference Data API' from running instance: 2ef07500-5361-49b8-9374-0aff11f577d8

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.WelcomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-24T10:45:03" hostname="LTGB07153" time="0.014">
-  <properties/>
-  <testcase name="should_return_welcome_response" classname="uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.WelcomeControllerTest" time="0.014"/>
-  <system-out><![CDATA[2019-04-24 11:45:03.270  INFO   --- [    Test worker] u.g.h.r.p.i.c.WelcomeController          : Welcome message 'Welcome to the System Reference Data API' from running instance: 2ef07500-5361-49b8-9374-0aff11f577d8
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
