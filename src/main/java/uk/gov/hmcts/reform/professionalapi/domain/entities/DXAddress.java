@@ -27,9 +27,9 @@ public class DXAddress {
 	@Column(name = "DX_EXCHANGE", length = 20)
 	private String dxExchange;
 
-	@ManyToOne
-	@JoinColumn(name = "CONTACT_INFORMATION_ID")
-	private ContactInformation contactInformation;
+//	@ManyToOne
+//	@JoinColumn(name = "CONTACT_INFORMATION_ID")
+//	private ContactInformation contactInformation;
 
 	public DXAddress(String dxNumber, String dxExchange) {
 		this.dxNumber = dxNumber;
