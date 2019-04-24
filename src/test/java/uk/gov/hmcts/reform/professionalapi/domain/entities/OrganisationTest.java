@@ -10,11 +10,14 @@ public class OrganisationTest {
     @Test
     public void creates_organisation_correctly() {
 
-        Organisation organisation = new Organisation("some-name", "some-status");
+        Organisation organisation = new Organisation();
 
         assertThat(organisation.getName()).isEqualTo("some-name");
         assertThat(organisation.getStatus()).isEqualTo("some-status");
-
+        assertThat(organisation.getSraId()).isEqualTo("sra-Id");
+        assertThat(organisation.getCompanyNumber()).isEqualTo("company-number");
+        assertThat(organisation.getSraRegulated()).isEqualTo(Boolean.FALSE);
+        assertThat(organisation.getCompanyUrl()).isEqualTo("company-url");
         assertThat(organisation.getId()).isNull();              // hibernate generated
     }
 
@@ -23,7 +26,8 @@ public class OrganisationTest {
 
         ProfessionalUser professionalUser = mock(ProfessionalUser.class);
 
-        Organisation organisation = new Organisation();
+        Organisation organisation = new Organisation("some-name", "some-status",
+                "sra-id","company-number",false,"company-url");
         organisation.addProfessionalUser(professionalUser);
 
         assertThat(organisation.getUsers())

@@ -48,7 +48,7 @@ public class OrganisationController {
 
         OrganisationResponse organisationResponse =
                 organisationService.createOrganisationFrom(organisationCreationRequest);
-
+        log.info("After OrganisationResponse...");
         return ResponseEntity
                 .status(201)
                 .body(organisationResponse);

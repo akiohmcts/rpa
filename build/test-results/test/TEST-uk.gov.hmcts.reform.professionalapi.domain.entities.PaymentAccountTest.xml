@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.gov.hmcts.reform.professionalapi.domain.entities.PaymentAccountTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-04-24T10:44:59" hostname="LTGB07153" time="0.002">
+  <properties/>
+  <testcase name="can_set_user" classname="uk.gov.hmcts.reform.professionalapi.domain.entities.PaymentAccountTest" time="0.001"/>
+  <testcase name="can_set_organisation" classname="uk.gov.hmcts.reform.professionalapi.domain.entities.PaymentAccountTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

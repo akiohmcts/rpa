@@ -34,10 +34,13 @@ public class OrganisationService {
     @Transactional
     public OrganisationResponse createOrganisationFrom(
             OrganisationCreationRequest organisationCreationRequest) {
-
-        Organisation newOrganisation = new Organisation(
+            Organisation newOrganisation = new Organisation(
                 organisationCreationRequest.getName(),
-                OrganisationStatus.PENDING.name()
+                OrganisationStatus.PENDING.name(),
+                organisationCreationRequest.getSraId(),
+                organisationCreationRequest.getCompanyNumber(),
+                organisationCreationRequest.getSraRegulated(),
+                organisationCreationRequest.getCompanyUrl()
         );
 
         Organisation organisation = organisationRepository.save(newOrganisation);
