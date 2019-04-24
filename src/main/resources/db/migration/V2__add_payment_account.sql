@@ -1,9 +1,3 @@
-ALTER TABLE professional_user
-  ADD COLUMN PAYMENT_ACCOUNT_ID UUID;
-
-ALTER TABLE professional_user
-  ADD FOREIGN KEY (PAYMENT_ACCOUNT_ID) REFERENCES payment_account (id);
-
 ALTER TABLE organisation
   ADD COLUMN SRA_ID VARCHAR(255);
 
