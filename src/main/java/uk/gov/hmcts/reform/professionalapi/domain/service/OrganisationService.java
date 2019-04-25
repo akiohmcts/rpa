@@ -1,13 +1,19 @@
 package uk.gov.hmcts.reform.professionalapi.domain.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import uk.gov.hmcts.reform.professionalapi.domain.entities.*;
+import uk.gov.hmcts.reform.professionalapi.domain.service.persistence.ContactInformationRepository;
+import uk.gov.hmcts.reform.professionalapi.domain.service.persistence.DXAddressRepository;
 import uk.gov.hmcts.reform.professionalapi.domain.service.persistence.OrganisationRepository;
 import uk.gov.hmcts.reform.professionalapi.domain.service.persistence.PaymentAccountRepository;
 import uk.gov.hmcts.reform.professionalapi.domain.service.persistence.ProfessionalUserRepository;
+import uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.request.ContactInformationCreationRequest;
+import uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.request.DXAddressCreationRequest;
 import uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.request.OrganisationCreationRequest;
 import uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.request.PbaAccountCreationRequest;
 import uk.gov.hmcts.reform.professionalapi.infrastructure.controllers.request.UserCreationRequest;
@@ -20,15 +26,21 @@ public class OrganisationService {
     private final OrganisationRepository organisationRepository;
     private final ProfessionalUserRepository professionalUserRepository;
     private final PaymentAccountRepository paymentAccountRepository;
+    private final DXAddressRepository dxAddressRepository;
+    private final ContactInformationRepository contactInformationRepository;
 
     public OrganisationService(
             OrganisationRepository organisationRepository,
             ProfessionalUserRepository professionalUserRepository,
-            PaymentAccountRepository paymentAccountRepository) {
+            PaymentAccountRepository paymentAccountRepository,
+            DXAddressRepository dxAddressRepository,
+            ContactInformationRepository contactInformationRepository) {
 
         this.organisationRepository = organisationRepository;
         this.professionalUserRepository = professionalUserRepository;
         this.paymentAccountRepository = paymentAccountRepository;
+        this.contactInformationRepository = contactInformationRepository;
+        this.dxAddressRepository = dxAddressRepository;
     }
 
     @Transactional
@@ -45,6 +57,8 @@ public class OrganisationService {
         addSuperUserToOrganisation(organisationCreationRequest.getSuperUser(), organisation);
 
         addPbaAccountToOrganisation(organisationCreationRequest.getPbaAccounts(), organisation);
+        
+        addContactInformationToOrganisation(organisationCreationRequest.getContactInformation(), organisation);
 
         organisationRepository.save(organisation);
 
@@ -77,5 +91,42 @@ public class OrganisationService {
                 organisation));
 
         organisation.addProfessionalUser(superUser);
+    }
+    
+    private void addContactInformationToOrganisation(
+    		List<ContactInformationCreationRequest> contactInformationCreationRequest,
+            Organisation organisation) {
+    	
+    	if (contactInformationCreationRequest != null) {
+    		contactInformationCreationRequest.forEach(contactInfo -> {
+                ContactInformation newContactInformation = new ContactInformation(contactInfo.getAddressLine1(),
+                		contactInfo.getAddressLine2(),
+                		contactInfo.getAddressLine3(),
+                		contactInfo.getTownCity(),
+                		contactInfo.getCounty(),
+                		contactInfo.getCountry(),
+                		contactInfo.getPostCode(),
+            			organisation);
+                
+                ContactInformation contactInformation = contactInformationRepository.save(newContactInformation);
+                            	
+                addDXAddressToContactInformation(contactInfo.getDxAddress(), contactInformation);
+            	contactInformationRepository.save(contactInformation);
+            	organisation.addContactInformation(contactInformation);
+            });
+        }
+    }
+    
+    private void addDXAddressToContactInformation(
+    		List<DXAddressCreationRequest> dxAddressCreationRequest,
+            ContactInformation contactInformation) {
+    	
+    	 if (dxAddressCreationRequest != null) {
+    		 dxAddressCreationRequest.forEach(dxAdd -> {
+                 DXAddress dxAddress = new DXAddress(dxAdd.getDxNumber(), dxAdd.getDxExchange(), contactInformation);
+                 dxAddressRepository.save(dxAddress);
+                 contactInformation.addDXAddress(dxAddress);	
+             });
+         }
     }
 }

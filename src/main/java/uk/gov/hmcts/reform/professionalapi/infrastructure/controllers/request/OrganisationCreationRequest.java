@@ -11,26 +11,27 @@ import lombok.Getter;
 @Builder(builderMethodName = "anOrganisationCreationRequest")
 public class OrganisationCreationRequest {
 
-    @NotNull
-    private final String name;
+	@NotNull
+	private final String name;
 
-    @NotNull
-    private final UserCreationRequest superUser;
+	@NotNull
+	private final UserCreationRequest superUser;
 
-    private List<PbaAccountCreationRequest> pbaAccounts;
+	private List<PbaAccountCreationRequest> pbaAccounts;
 
-    @JsonCreator
-    public OrganisationCreationRequest(
-            @JsonProperty("name") String name,
-            @JsonProperty("superUser") UserCreationRequest superUser,
-            @JsonProperty("pbaAccounts") List<PbaAccountCreationRequest> pbaAccountCreationRequests) {
+	private final List<ContactInformationCreationRequest> contactInformation;
 
-        this.name = name;
-        this.superUser = superUser;
-        this.pbaAccounts = pbaAccountCreationRequests;
-    }
+	@JsonCreator
+	public OrganisationCreationRequest(
+			@JsonProperty("name") String name,
+			@JsonProperty("superUser") UserCreationRequest superUser,
+			@JsonProperty("pbaAccounts") List<PbaAccountCreationRequest> pbaAccountCreationRequests,
+			@JsonProperty("contactInformation") List<ContactInformationCreationRequest> contactInformationRequest) {
 
-
+		this.name = name;
+		this.superUser = superUser;
+		this.pbaAccounts = pbaAccountCreationRequests;
+		this.contactInformation = contactInformationRequest;
+	}
 
 }
-

@@ -16,6 +16,8 @@ public class OrganisationResponse {
     private final List<String> userIds;
     @JsonProperty
     private final List<String> pbaAccounts;
+    @JsonProperty
+    private final List<String> contactInformation;
 
     public OrganisationResponse(Organisation organisation) {
         this.id = organisation.getId().toString();
@@ -28,5 +30,11 @@ public class OrganisationResponse {
                 .stream()
                 .map(acc -> acc.getPbaNumber())
                 .collect(toList());
+        this.contactInformation = organisation.getContactInformation()
+        		.stream()
+        		.map(info -> info.getAddressLine1())
+        		.collect(toList());
     }
+    
+//    organisations.stream().map(organisation -> new OrganisationResponse(organisation)).collect(Collectors.toList()); 
 }

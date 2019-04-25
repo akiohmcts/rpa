@@ -28,6 +28,9 @@ public class Organisation {
     @OneToMany(mappedBy = "organisation")
     private List<PaymentAccount> paymentAccounts = new ArrayList<>();
 
+    @OneToMany(mappedBy = "organisation")
+    private List<ContactInformation> contactInformations = new ArrayList<>();
+    
     @Column(name = "STATUS")
     private String status;
 
@@ -54,6 +57,10 @@ public class Organisation {
     public void addPaymentAccount(PaymentAccount paymentAccount) {
         paymentAccounts.add(paymentAccount);
     }
+    
+    public void addContactInformation(ContactInformation contactInformation) {
+    	contactInformations.add(contactInformation);
+    }
 
     public UUID getId() {
         return id;
@@ -69,6 +76,10 @@ public class Organisation {
 
     public List<PaymentAccount> getPaymentAccounts() {
         return paymentAccounts;
+    }
+    
+    public List<ContactInformation> getContactInformation() {
+    	return contactInformations;
     }
 
     public String getStatus() {
